@@ -1,0 +1,6 @@
+-- CreateTable
+CREATE TABLE "miniRest" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL DEFAULT '',
+    "imageBg" TEXT NOT NULL DEFAULT ''
+);
