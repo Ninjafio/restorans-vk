@@ -14,7 +14,8 @@ export const DEFAULT_VIEW_PANELS = {
   HOME: 'home',
   RESTORANS: 'restorans',
   ADRES: 'adres',
-  MOBILE: 'mobile'
+  MOBILE: 'mobile',
+  RESTORANSLIST: 'restoranslist'
 } as const;
 
 export const routes = RoutesConfig.create([
@@ -24,6 +25,7 @@ export const routes = RoutesConfig.create([
       createPanel(DEFAULT_VIEW_PANELS.RESTORANS, `/${DEFAULT_VIEW_PANELS.RESTORANS}`, []),
       createPanel(DEFAULT_VIEW_PANELS.ADRES, `/${DEFAULT_VIEW_PANELS.ADRES}`, []),
       createPanel(DEFAULT_VIEW_PANELS.MOBILE, `/${DEFAULT_VIEW_PANELS.MOBILE}`, []),
+      createPanel(DEFAULT_VIEW_PANELS.RESTORANSLIST, `/${DEFAULT_VIEW_PANELS.RESTORANSLIST}`, []),
     ]),
   ]),
 ]);

@@ -7,6 +7,8 @@ import {
   Group,
   Button,
   Input,
+  PanelHeaderBack,
+  PanelHeader,
 } from '@vkontakte/vkui';
 import { UserInfo } from '@vkontakte/vk-bridge';
 import { useRouteNavigator } from "@vkontakte/vk-mini-apps-router";
@@ -15,16 +17,17 @@ export interface HomeProps extends NavIdProps {
   fetchedUser?: UserInfo;
 }
 
-/*<PanelHeader before={<PanelHeaderBack onClick={() => routeNavigator.back()} />}>
-      </PanelHeader>*/ //Навигация
+
 
 export const Adres: FC<NavIdProps> = ({ id}) => {
- // const routeNavigator = useRouteNavigator(); //Навигация
+ const routeNavigator = useRouteNavigator(); //Навигация
   
   return (
     <Panel id={id}>
      
-      
+     <PanelHeader before={<PanelHeaderBack onClick={() => routeNavigator.back()} />}>
+      <Text>Адрес</Text>
+     </PanelHeader>
     <Div style={{
       display: 'flex',
       justifyContent:'center',
@@ -97,7 +100,7 @@ export const Adres: FC<NavIdProps> = ({ id}) => {
           //after={after}
           type="text"
           //align={align}
-          defaultValue="Начните вводить улицу..."
+          placeholder='Начните вводить улицу...'
           //disabled={disabled}
           style={{borderRadius:20, height:30, width:250, border: '1px solid #E8E8E8', fontSize: 9, }}
         />
