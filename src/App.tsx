@@ -1,6 +1,6 @@
 import { View, SplitLayout, SplitCol} from '@vkontakte/vkui';
 import { useActiveVkuiLocation } from '@vkontakte/vk-mini-apps-router';
-import {Restorans} from "./panels/Restorans.tsx"
+import {Mobile} from "./panels/Mobile.tsx"
 import { Home } from "./panels/Home.tsx";
 import { DEFAULT_VIEW_PANELS } from './routes';
 
@@ -12,7 +12,7 @@ export const App = () => {
       <SplitCol>
         <View activePanel={activePanel}>
         <Home id="home"/>
-        <Restorans id="restorans"/>
+        <Mobile id="mobile"/>
         </View>
       </SplitCol>
     </SplitLayout>

@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "tunnel": "vk-tunnel --http-protocol=http --host=localhost --port=5173",
-    "deploy": "vite build && vk-miniapps-deploy"
+    "deploy": "vite build && vk-miniapps-deploy",
+    "dev": "vite"
   },
   "dependencies": {
     "@vkontakte/icons": "^3.1.1",
@@ -36,6 +37,6 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "terser": "^5.4.0",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.4.16"
   }
 }
