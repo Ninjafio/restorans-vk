@@ -1,6 +1,6 @@
 export const fetchRestorans = async () => {
     try {
-      const response = await fetch("LINK", {
+      const response = await fetch("http://localhost:3001/mini-rest", {
         method: "GET",
       });
       if (!response.ok) {

@@ -8,6 +8,8 @@ import {
   Button,
   Input,
   Banner,
+  PanelHeader,
+  PanelHeaderBack,
 } from '@vkontakte/vkui';
 import { UserInfo } from '@vkontakte/vk-bridge';
 import { useRouteNavigator } from "@vkontakte/vk-mini-apps-router";
@@ -22,6 +24,9 @@ export const Mobile: FC<NavIdProps> = ({ id}) => {
   
   return (
     <Panel id={id}>
+         <PanelHeader before={<PanelHeaderBack onClick={() => routeNavigator.back()} />}>
+          <Text>Номер телефона</Text>
+         </PanelHeader>
     <Div style={{
       display: 'flex',
       justifyContent:'center',
@@ -39,7 +44,7 @@ export const Mobile: FC<NavIdProps> = ({ id}) => {
             marginBottom: '40px' 
           }}
         >
-          Адрес
+          Номер телефона
         </Text>
       <Div 
       style={{

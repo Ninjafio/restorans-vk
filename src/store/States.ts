@@ -1,5 +1,6 @@
 import { createEffect, createEvent, createStore } from "effector";
 import { fetchRestorans } from "../service/restoransService";
+import { IRest } from "../types/type";
 
 export const loadRestoransFx = createEffect(async () => {
     try {
@@ -17,5 +18,12 @@ export const loadRestoransFx = createEffect(async () => {
     loadRestoransFx.doneData,
     (_, FethFilms) => FethFilms
   );
+  export const $selectedRestoran = createStore<IRest | null>(null);
+  export const $activeModal = createStore<string>("");
 
   export const setFetchedRestorans = createEvent<IRest>();
+  export const setSelectedRestoran = createEvent<IRest>();
+  export const setActiveModal = createEvent<string>();
+
+  $selectedRestoran.on(setSelectedRestoran, (_, state) => state);
+  $activeModal.on(setActiveModal, (_, state) => state);
